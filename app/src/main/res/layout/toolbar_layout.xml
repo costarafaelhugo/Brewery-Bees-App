@@ -33,20 +33,24 @@
             android:layout_marginStart="94dp">
 
 
-            <com.google.android.material.appbar.MaterialToolbar
+            <ImageButton
                 android:id="@+id/fav_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:background="@color/black"
+                android:src="@drawable/star_icon_toolbar"
                 app:layout_constraintBottom_toBottomOf="@+id/heart_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/star_icon_toolbar" />
 
-            <com.google.android.material.appbar.MaterialToolbar
+            <ImageButton
                 android:id="@+id/heart_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="45dp"
+                android:background="@color/black"
+                android:src="@drawable/heart_icon_toolbar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/fav_icon"
                 app:layout_constraintTop_toTopOf="parent"
