@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Brewery Bees App</string>
+    <string name="string_wellcome">Bem vindo(a)!</string>
+    <string name="encontre_as_melhores_cevejarias">Encontre as melhores cevejarias</string>
 </resources>
