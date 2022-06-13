@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teste"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/teste">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,13 +20,13 @@
         android:id="@+id/textView_Welcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="16dp"
-        android:text="Bem vindo(a)!"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/fontquicksandbold"
+        android:text="Bem vindo(a)!"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,18 +35,18 @@
         android:id="@+id/textView_Best_Beers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_marginStart="16dp"
-        android:text="Encontre as melhores cevejarias"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/fontquicksandbold"
+        android:text="Encontre as melhores cevejarias"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textView_Welcome" />
 
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,9 +55,45 @@
         android:layout_marginEnd="16dp"
         android:background="@color/white"
         app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_Best_Beers"
         app:queryHint="Buscar cervejaria por cidade"
-        />
+        tools:text="Buscar cervejaria por cidade" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchbar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        >
+
+        <ImageButton
+            android:id="@+id/gps_button"
+            android:layout_width="25dp"
+            app:layout_constraintEnd_toStartOf="@id/text_view_meu_local"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/yellow_bees"
+          android:src="@drawable/ic_baseline_gps_fixed_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="107dp" />
+
+        <TextView
+            android:id="@+id/text_view_meu_local"
+            style="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Utilizar meu local"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/gps_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Utilizar meu local" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
