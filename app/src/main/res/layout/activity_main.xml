@@ -70,11 +70,35 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
+        android:id="@+id/background_layout"
         layout="@layout/background_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="56dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/top_rate_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/background_layout"
+        android:text="Top 10 rates Breweries"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/fontquicksandbold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_main"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_rate_txt"
+        tools:layout_editor_absoluteX="7dp"
+        android:layout_marginTop="5dp"
+        tools:layout_editor_absoluteY="286dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
