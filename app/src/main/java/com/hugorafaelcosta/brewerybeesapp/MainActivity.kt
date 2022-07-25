@@ -1,10 +1,12 @@
 package com.hugorafaelcosta.brewerybeesapp
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragmente_list_vertical.*
+import kotlinx.android.synthetic.main.list_vertical.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,4 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         recyclerview_main.adapter = this.breweryAdapter
     }
+
+
 }

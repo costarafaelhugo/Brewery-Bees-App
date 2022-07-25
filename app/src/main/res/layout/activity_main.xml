@@ -93,16 +93,5 @@
         android:fontFamily="@font/fontquicksandbold"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_main"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_rate_txt"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="16dp"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="286dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
